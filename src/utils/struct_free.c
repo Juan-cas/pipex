@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   struct_free.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 20:26:07 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/10 03:27:56 by juan-cas         ###   ########.fr       */
+/*   Created: 2024/05/02 14:24:45 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/05/10 02:46:49 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../../pipex.h"
 
-
-
-int main(int argc, char **argv, char **envp)
+void free_struct(t_env *commands)
 {
-	t_env *commands;
+	int i;
 
-	if (argc == 5 && BONUS == 0)
-	{
-		commands = pathfinder(envp, argv);
-		pipex(commands, envp);
-	}
-//	else if (argc >= 5 BONUS == 1)
-//	{
-//		commands = pathfinder(envp, argv);
-//		pipex_bonus(commands);
-//	}
-	else
-	{
-		perror("invalid argument");
-		exit(1);
-	}
-	free_struct(commands);
-	return 0;
+	i = -1;
+	free(commands->infile);
+	free(commands->outfile);
+	free_matrix(commands->paths);
+	while (commands->lst_commands[++i])
+		free_matrix(commands->lst_commands[i]);
+	free(commands->lst_commands);
 }

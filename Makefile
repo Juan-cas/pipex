@@ -10,8 +10,16 @@ LIBFT_DIR := $(LIB_DIR)/libft
 
 # Source files
 SRC_FILES := $(SRC_DIR)/main.c \
-$(SRC_DIR)./parsing/pathfinder.c \
-$(SRC_DIR)./parsing/init_struct.c \
+$(SRC_DIR)/parsing/pathfinder.c \
+$(SRC_DIR)/parsing/init_struct.c \
+$(SRC_DIR)/pipex.c \
+$(SRC_DIR)/utils/free_matrix.c \
+$(SRC_DIR)/utils/errors.c \
+$(SRC_DIR)/utils/struct_free.c \
+$(SRC_DIR)/utils/child_birth.c \
+$(SRC_DIR)/utils/command_split.c \
+$(SRC_DIR)/utils/append.c \
+#$(SRC_DIR)/
 
 # Object files
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))

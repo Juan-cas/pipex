@@ -41,21 +41,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-/*int main (void)
-{
-	char *str = "Hello World";
-	unsigned int start = 1;
-	size_t len = 10;
-	char *result = ft_substr(str, start, len);
-	printf("normal:%s\n", str);
-
-
-	if (result)
-	{
-		printf("substring: %s\n", result);
-	}
-	else
-	printf("Error: the string was not found.\n");
-	return (0);
-}*/

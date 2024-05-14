@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:42:50 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/04/30 22:30:58 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/10 21:08:03 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,48 +27,41 @@ static char *w_path(char **envp)
 	return (NULL);
 }
 
-static char *path_tester(char **matrix, char *command)
+char *path_tester(char **matrix, char *command)
 {
 	int i;
 	char *order;
+	int checker;
 
 	i = -1;
 	while(matrix[++i])
 	{
-		order = ft_strjoin(matrix[i], command);
-		if (access(order, F_OK) == 0)
+		order = append(matrix[i], command);
+		if (!order)
+			exit(1);
+		checker = access(order, F_OK);
+		if (checker == 0)
 			return (order);
 		free(order);
 	}
 	return (NULL);
 }
 
-static void path_fixer(t_env *commands, int counter)
-{
-	char *str;
-	char *final_str;
-
-	str = path_tester(commands->paths, commands->tempmatrix[0]);
-	final_str = ft_substr(str, 0, ft_strlen(str));
-	free(commands->tempmatrix[0]);
-	commands->tempmatrix[0] = final_str;
-}
-
 static void command_splitter(t_env *commands, char **argv)
 {
 	int	i;
-	int j;
+	int	j;
 
 	j = 0;
-	commands->lst_commands = malloc( commands->counter * sizeof(char **));
-	i = 0;
-	while (++i <= commands->counter)
+	i = 2;
+
+	while (i < commands->arg_counter - 1)
 	{
-		commands->tempmatrix = ft_split(argv[i], ' ');
-		if (path_tester(commands->paths, commands->tempmatrix[0]))
-			path_fixer(commands, j++);
-		else
-			free_matrix(commands->tempmatrix);
+		commands->lst_commands[j] = ft_split(argv[i], ' ');
+		if (!commands->lst_commands[j])
+			exit(1);
+		j++;
+		i++;
 	}
 }
 
@@ -78,6 +71,9 @@ t_env *pathfinder(char **envp, char **argv)
 	int		i;
 	t_env	*commands;
 
+	commands = malloc(sizeof(t_env));
+	if (!commands)
+		exit(1);
 	init_struct(commands);
 	i = 1;
 	while (argv[++i]);
@@ -85,8 +81,12 @@ t_env *pathfinder(char **envp, char **argv)
 	str = w_path(envp);
 	commands->arg_counter = i;
 	commands->infile = ft_substr(argv[1], 0, ft_strlen(argv[1]));
-	commands->outfile = ft_substr(argv[i], 0, ft_strlen(argv[i]));
+	malloc_error_check(commands->infile);
+	commands->outfile = ft_substr(argv[i -  1], 0, ft_strlen(argv[i - 1]));
+	malloc_error_check(commands->outfile);
 	commands->paths = ft_split(str + 5, ':');
+	if (!commands->paths)
+		exit(1);
 	command_splitter(commands, argv);
 	return (commands);
 }

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="pipex" targetName="rebonus" />
+      <config projectName="pipex" targetName="libft_fclean" />
+      <config projectName="pipex" targetName="re" />
+      <config projectName="pipex" targetName="libft" />
+      <config projectName="pipex" targetName="bonus" />
+      <config projectName="pipex" targetName="pipex" />
+      <config projectName="pipex" targetName="libft_clean" />
+      <config projectName="pipex" targetName="fclean" />
+      <config projectName="pipex" targetName="all" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/append.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/command_split.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/struct_free.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libft/ft_substr.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_substr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/error/free_matrix.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsing/init_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/init_struct.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsing/pathfinder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/pathfinder.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/..">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/output.txt" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="pipex" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="pipex" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2fpRJ3huXXDYeExlsU9N9zQ0APe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Native Application.all.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/Storage/42cursus/Push_Swap&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="inout.txt &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
+      <envs>
+        <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
+      </envs>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="inout.txt &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
+      <envs>
+        <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
+      </envs>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="" />
+      <created>1714495957803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714495957803</updated>
+      <workItem from="1714495958870" duration="15606000" />
+      <workItem from="1714579756184" duration="7898000" />
+      <workItem from="1714591430618" duration="9609000" />
+      <workItem from="1714608625108" duration="131000" />
+      <workItem from="1714608769065" duration="121000" />
+      <workItem from="1714608890612" duration="23000" />
+      <workItem from="1714608918090" duration="208000" />
+      <workItem from="1714609140683" duration="6579000" />
+      <workItem from="1714731026149" duration="2822000" />
+      <workItem from="1715020192805" duration="3018000" />
+      <workItem from="1715169178290" duration="10000" />
+      <workItem from="1715169193521" duration="5136000" />
+      <workItem from="1715248211866" duration="24661000" />
+      <workItem from="1715311480346" duration="52000" />
+      <workItem from="1715311533066" duration="450000" />
+      <workItem from="1715311987990" duration="13072000" />
+      <workItem from="1715370647806" duration="93000" />
+      <workItem from="1715370744884" duration="4409000" />
+      <workItem from="1715603769684" duration="9641000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

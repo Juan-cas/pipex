@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 20:26:07 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/10 03:27:56 by juan-cas         ###   ########.fr       */
+/*   Created: 2024/05/01 04:40:28 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/05/10 02:46:36 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../../pipex.h"
 
 
-
-int main(int argc, char **argv, char **envp)
+void malloc_error_check(char *str)
 {
-	t_env *commands;
-
-	if (argc == 5 && BONUS == 0)
-	{
-		commands = pathfinder(envp, argv);
-		pipex(commands, envp);
-	}
-//	else if (argc >= 5 BONUS == 1)
-//	{
-//		commands = pathfinder(envp, argv);
-//		pipex_bonus(commands);
-//	}
-	else
-	{
-		perror("invalid argument");
+	if (!str)
 		exit(1);
-	}
-	free_struct(commands);
-	return 0;
+}
+
+void num_error_check(int i)
+{
+	if (i == -1)
+		exit(1);
+}
+
+void fd_read_error_check(char *file)
+{
+	int i;
+
+	i = open(file, O_RDONLY);
+	if (i == -1)
+		exit(1);
+	else close(i);
 }

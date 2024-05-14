@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   child_birth.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 20:26:07 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/10 03:27:56 by juan-cas         ###   ########.fr       */
+/*   Created: 2024/05/02 02:33:05 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/05/10 02:48:46 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../../pipex.h"
 
-
-
-int main(int argc, char **argv, char **envp)
+int child_birth(void)
 {
-	t_env *commands;
+	int child_id;
 
-	if (argc == 5 && BONUS == 0)
-	{
-		commands = pathfinder(envp, argv);
-		pipex(commands, envp);
-	}
-//	else if (argc >= 5 BONUS == 1)
-//	{
-//		commands = pathfinder(envp, argv);
-//		pipex_bonus(commands);
-//	}
-	else
-	{
-		perror("invalid argument");
+	child_id = fork();
+	if (child_id == -1)
 		exit(1);
-	}
-	free_struct(commands);
-	return 0;
+	return (child_id);
 }
