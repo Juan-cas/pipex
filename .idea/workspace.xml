@@ -23,20 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/append.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/command_split.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/struct_free.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/fd_closer.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/opener.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/pipes_redirect.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/wait_for_complete.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libft/ft_substr.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_substr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainv2.c" beforeDir="false" afterPath="$PROJECT_DIR$/mainv2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" afterPath="$PROJECT_DIR$/pipex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error/free_matrix.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/output.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsing/init_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/init_struct.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsing/pathfinder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/pathfinder.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipex.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipex_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/child_birth.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/errors.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/struct_free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/struct_free.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +108,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;C/C++ File.main.c.executor&quot;: &quot;Debug&quot;,
     &quot;Native Application.all.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -118,7 +123,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -129,8 +134,16 @@
       <recent name="$PROJECT_DIR$/src/utils" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="inout.txt &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
+  <component name="RunManager" selected="Native Application.all">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="input.txt &quot;cat -e&quot; &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
+      <envs>
+        <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
+      </envs>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="input.txt &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
       <envs>
         <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
       </envs>
@@ -151,6 +164,27 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="main.c" CONFIG_NAME="main.c">
+      <option name="sourceFile" value="src/main.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="main.c" CONFIG_NAME="main.c">
+      <option name="sourceFile" value="src/main.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.main.c" />
+      <item itemvalue="Native Application.all" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.main.c" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -179,11 +213,37 @@
       <workItem from="1715370647806" duration="93000" />
       <workItem from="1715370744884" duration="4409000" />
       <workItem from="1715603769684" duration="9641000" />
+      <workItem from="1715705667240" duration="2579000" />
+      <workItem from="1715708248596" duration="85000" />
+      <workItem from="1715708338505" duration="19185000" />
+      <workItem from="1715791037038" duration="24000" />
+      <workItem from="1715791066265" duration="13366000" />
+      <workItem from="1715808241446" duration="16814000" />
+      <workItem from="1715909557386" duration="7196000" />
+      <workItem from="1715979601222" duration="92000" />
+      <workItem from="1715979697753" duration="3428000" />
+      <workItem from="1715990145299" duration="3129000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.c</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/parsing/pathfinder.c</url>
+          <line>84</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

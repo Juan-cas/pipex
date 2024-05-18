@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:42:50 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/10 21:08:03 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/16 03:35:08 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char *path_tester(char **matrix, char *command)
 	int checker;
 
 	i = -1;
+	if (access(command, F_OK) == 0)
+		return (ft_substr(command, 0, ft_strlen(command)));
 	while(matrix[++i])
 	{
 		order = append(matrix[i], command);
@@ -55,7 +57,7 @@ static void command_splitter(t_env *commands, char **argv)
 	j = 0;
 	i = 2;
 
-	while (i < commands->arg_counter - 1)
+	while (i < commands->arg_counter)
 	{
 		commands->lst_commands[j] = ft_split(argv[i], ' ');
 		if (!commands->lst_commands[j])
@@ -74,19 +76,23 @@ t_env *pathfinder(char **envp, char **argv)
 	commands = malloc(sizeof(t_env));
 	if (!commands)
 		exit(1);
-	init_struct(commands);
+	init_struct(commands, argv);
 	i = 1;
 	while (argv[++i]);
 
-	str = w_path(envp);
-	commands->arg_counter = i;
+	if (envp)
+	{
+		str = w_path(envp);
+		commands->paths = ft_split(str + 5, ':');
+		if (!commands->paths)
+			exit(1);
+	}
+
+	commands->arg_counter = i - 1;
 	commands->infile = ft_substr(argv[1], 0, ft_strlen(argv[1]));
 	malloc_error_check(commands->infile);
 	commands->outfile = ft_substr(argv[i -  1], 0, ft_strlen(argv[i - 1]));
 	malloc_error_check(commands->outfile);
-	commands->paths = ft_split(str + 5, ':');
-	if (!commands->paths)
-		exit(1);
 	command_splitter(commands, argv);
 	return (commands);
 }

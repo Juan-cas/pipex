@@ -1,45 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errors.c                                           :+:      :+:    :+:   */
+/*   pipe_redirect.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 04:40:28 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/14 21:40:55 by juan-cas         ###   ########.fr       */
+/*   Created: 2024/05/17 22:39:42 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/05/17 22:39:42 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-
-void malloc_error_check(char *str)
+void build_extra_pipe(int *fd)
 {
-	if (!str)
+	if (pipe(fd) == -1)
 		exit(1);
 }
 
-void num_error_check(int i)
+void pipe_redirect(int redirector_fd, int redirected_fd)
 {
-	if (i == -1)
+	if (dup2(redirector_fd, redirected_fd) == -1)
 		exit(1);
-}
-
-int fd_open_and_check_error(char *file, int flag)
-{
-	int i;
-
-	if (flag == 0)
-	{
-		i = open(file, O_RDONLY);
-		num_error_check(i);
-		return (i);
-	}
-	if (flag == 1)
-	{
-		i = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0777);
-		num_error_check(i);
-		return (i);
-	}
-	exit(1);
 }
