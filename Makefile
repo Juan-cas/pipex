@@ -14,7 +14,7 @@ $(SRC_DIR)/parsing/pathfinder.c \
 $(SRC_DIR)/parsing/init_struct.c \
 $(SRC_DIR)/pipex.c \
 $(SRC_DIR)/utils/free_matrix.c \
-$(SRC_DIR)/utils/errors.c \
+$(SRC_DIR)/error/errors.c \
 $(SRC_DIR)/utils/struct_free.c \
 $(SRC_DIR)/utils/child_birth.c \
 $(SRC_DIR)/utils/command_split.c \
@@ -23,6 +23,9 @@ $(SRC_DIR)/pipex_bonus.c \
 $(SRC_DIR)/utils/wait_for_complete.c \
 $(SRC_DIR)/utils/fd_closer.c \
 $(SRC_DIR)/utils/pipes_redirect.c \
+$(SRC_DIR)/parsing/relative_or_absolute.c \
+$(SRC_DIR)/error/no_path.c \
+$(SRC_DIR)/utils/infile_outfile.c \
 # Object files
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
 

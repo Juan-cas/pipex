@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:42:50 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/16 03:35:08 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/22 04:43:19 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static char *w_path(char **envp)
 			return envp[i];
 		}
 	}
+	there_is_no_path();
 	return (NULL);
 }
 
@@ -34,8 +35,13 @@ char *path_tester(char **matrix, char *command)
 	int checker;
 
 	i = -1;
-	if (access(command, F_OK) == 0)
-		return (ft_substr(command, 0, ft_strlen(command)));
+	if (relative_or_absolute(command))
+	{
+		if (access(command, F_OK) == 0)
+			return (ft_substr(command, 0, ft_strlen(command)));
+		else
+			failed_executer();
+	}
 	while(matrix[++i])
 	{
 		order = append(matrix[i], command);
@@ -79,7 +85,6 @@ t_env *pathfinder(char **envp, char **argv)
 	init_struct(commands, argv);
 	i = 1;
 	while (argv[++i]);
-
 	if (envp)
 	{
 		str = w_path(envp);
@@ -87,12 +92,8 @@ t_env *pathfinder(char **envp, char **argv)
 		if (!commands->paths)
 			exit(1);
 	}
-
 	commands->arg_counter = i - 1;
-	commands->infile = ft_substr(argv[1], 0, ft_strlen(argv[1]));
-	malloc_error_check(commands->infile);
-	commands->outfile = ft_substr(argv[i -  1], 0, ft_strlen(argv[i - 1]));
-	malloc_error_check(commands->outfile);
+	infile_outfile_check(commands, argv, i);
 	command_splitter(commands, argv);
 	return (commands);
 }

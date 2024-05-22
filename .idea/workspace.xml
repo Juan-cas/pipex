@@ -23,24 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/fd_closer.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/opener.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/pipes_redirect.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/wait_for_complete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/error/no_path.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parsing/relative_or_absolute.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/infile_outfile.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainv2.c" beforeDir="false" afterPath="$PROJECT_DIR$/mainv2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" afterPath="$PROJECT_DIR$/pipex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libft/ft_split.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_split.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libft/ft_strncmp.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_strncmp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsing/init_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/init_struct.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsing/pathfinder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/pathfinder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pipex.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pipex_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/child_birth.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/errors.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/struct_free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/struct_free.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/error/errors.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/pipes_redirect.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/pipes_redirect.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,30 +104,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ File.main.c.executor&quot;: &quot;Debug&quot;,
-    &quot;Native Application.all.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/Storage/42cursus/Push_Swap&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.main.c.executor": "Debug",
+    "Native Application.all.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/mnt/Storage/42cursus/Push_Swap",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/error" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/utils" />
     </key>
@@ -222,7 +222,10 @@
       <workItem from="1715909557386" duration="7196000" />
       <workItem from="1715979601222" duration="92000" />
       <workItem from="1715979697753" duration="3428000" />
-      <workItem from="1715990145299" duration="3129000" />
+      <workItem from="1715990145299" duration="16690000" />
+      <workItem from="1716161998520" duration="3477000" />
+      <workItem from="1716323233775" duration="15643000" />
+      <workItem from="1716347807175" duration="2250000" />
     </task>
     <servers />
   </component>
@@ -236,11 +239,6 @@
           <url>file://$PROJECT_DIR$/src/main.c</url>
           <line>18</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/parsing/pathfinder.c</url>
-          <line>84</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

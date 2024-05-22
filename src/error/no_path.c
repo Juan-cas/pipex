@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipe_redirect.c                                    :+:      :+:    :+:   */
+/*   no_path.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 22:39:42 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/20 01:43:26 by juan-cas         ###   ########.fr       */
+/*   Created: 2024/05/22 03:59:31 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/05/22 04:00:34 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-void build_extra_pipe(int fd[2])
-{
-	if (pipe(fd) == -1)
-	{
-		perror("pipe failed, please try again");
-		exit(1);
-	}
-}
 
-void pipe_redirect(int redirector_fd, int redirected_fd)
+void there_is_no_path()
 {
-	if (dup2(redirector_fd, redirected_fd) == -1)
-	{
-		perror("dup2 failed to execute, please try again");
-		exit(1);
-	}
+	perror("there is no path available, please enable path");
+	exit(1);
 }
-
