@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:42:50 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/22 04:43:19 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/22 06:42:23 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char *path_tester(char **matrix, char *command)
 	return (NULL);
 }
 
-static void command_splitter(t_env *commands, char **argv)
+static void command_splitter(t_env *information, char **argv)
 {
 	int	i;
 	int	j;
@@ -63,10 +63,10 @@ static void command_splitter(t_env *commands, char **argv)
 	j = 0;
 	i = 2;
 
-	while (i < commands->arg_counter)
+	while (i < information->arg_counter)
 	{
-		commands->lst_commands[j] = ft_split(argv[i], ' ');
-		if (!commands->lst_commands[j])
+		information->lst_commands[j] = ft_split(argv[i], ' ');
+		if (!information->lst_commands[j])
 			exit(1);
 		j++;
 		i++;
@@ -77,23 +77,23 @@ t_env *pathfinder(char **envp, char **argv)
 {
 	char	*str;
 	int		i;
-	t_env	*commands;
+	t_env	*information;
 
-	commands = malloc(sizeof(t_env));
-	if (!commands)
+	information = malloc(sizeof(t_env));
+	if (!information)
 		exit(1);
-	init_struct(commands, argv);
+	init_struct(information, argv);
 	i = 1;
 	while (argv[++i]);
 	if (envp)
 	{
 		str = w_path(envp);
-		commands->paths = ft_split(str + 5, ':');
-		if (!commands->paths)
+		information->paths = ft_split(str + 5, ':');
+		if (!information->paths)
 			exit(1);
 	}
-	commands->arg_counter = i - 1;
-	infile_outfile_check(commands, argv, i);
-	command_splitter(commands, argv);
-	return (commands);
+	information->arg_counter = i - 1;
+	infile_outfile_check(information, argv, i);
+	command_splitter(information, argv);
+	return (information);
 }

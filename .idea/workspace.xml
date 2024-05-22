@@ -23,22 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/error/no_path.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parsing/relative_or_absolute.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/infile_outfile.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libft/ft_split.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_split.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libft/ft_strncmp.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_strncmp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" afterPath="$PROJECT_DIR$/pipex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsing/pathfinder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/pathfinder.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipex.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pipex_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/child_birth.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/error/errors.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/pipes_redirect.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/pipes_redirect.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/wait_for_complete.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/wait_for_complete.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,23 +218,12 @@
       <workItem from="1715990145299" duration="16690000" />
       <workItem from="1716161998520" duration="3477000" />
       <workItem from="1716323233775" duration="15643000" />
-      <workItem from="1716347807175" duration="2250000" />
+      <workItem from="1716347807175" duration="8888000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/main.c</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

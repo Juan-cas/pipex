@@ -45,8 +45,7 @@ void pipex(t_env *commands, char **envp)
 	int fd[2];
 	int child_id;
 
-	if (pipe(fd) == -1)
-		exit(1);
+	build_extra_pipe(fd);
 	child_id = child_birth();
 	if (child_id == 0)
 		first_child(commands->lst_commands[0], commands, fd, envp);

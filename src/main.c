@@ -16,24 +16,24 @@
 
 int main(int argc, char **argv, char **envp)
 {
-	t_env *commands;
+	t_env *information;
 
 	if (argc == 5 && BONUS == 0)
 	{
-		commands = pathfinder(envp, argv);
-		pipex(commands, envp);
+		information = pathfinder(envp, argv);
+		pipex(information, envp);
 	}
 	else if (argc >= 5 && BONUS == 1)
 	{
-		commands = pathfinder(envp, argv);
-		pipex_bonus(commands, envp);
+		information = pathfinder(envp, argv);
+		pipex_bonus(information, envp);
 	}
 	else
 	{
 		perror("please check number of arguments");
 		exit(1);
 	}
-	free_struct(commands);
-	free(commands);
+	free_struct(information);
+	free(information);
 	return 0;
 }
