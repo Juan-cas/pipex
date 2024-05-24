@@ -22,7 +22,7 @@ $(SRC_DIR)/utils/append.c \
 $(SRC_DIR)/pipex_bonus.c \
 $(SRC_DIR)/utils/wait_for_complete.c \
 $(SRC_DIR)/utils/fd_closer.c \
-$(SRC_DIR)/utils/pipes_redirect.c \
+$(SRC_DIR)/utils/pipe_management.c \
 $(SRC_DIR)/parsing/relative_or_absolute.c \
 $(SRC_DIR)/error/no_path.c \
 $(SRC_DIR)/utils/infile_outfile.c \

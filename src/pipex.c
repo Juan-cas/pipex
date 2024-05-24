@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 23:53:12 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/18 02:52:11 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:52:40 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static void first_child(char **commands, t_env *infomation, int *fd, char **envp
 	inputfd = fd_open_and_check_error(infomation->infile, 0);
 	pipe_redirect(inputfd, STDIN_FILENO);
 	pipe_redirect(fd[fd_write], STDOUT_FILENO);
-	fd_closer(fd, 1, inputfd);
+	fd_closer(fd);
+	close(inputfd);
 	if (execve(binary_location, commands, envp) == -1)
 		exit(1);
 }
@@ -35,7 +36,8 @@ static void last_child(char **commands, t_env *information, int *fd, char **envp
 	outputfd = fd_open_and_check_error(information->outfile, 1);
 	pipe_redirect(fd[fd_read], STDIN_FILENO);
 	pipe_redirect(outputfd, STDOUT_FILENO);
-	fd_closer(fd, 1, outputfd);
+	fd_closer(fd);
+	close(outputfd);
 	if (execve(binary_location, commands, envp) == -1)
 		exit(1);
 }

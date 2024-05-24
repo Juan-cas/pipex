@@ -23,14 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" afterPath="$PROJECT_DIR$/pipex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsing/pathfinder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/pathfinder.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsing/init_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/init_struct.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pipex.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pipex_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/child_birth.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fd_closer.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fd_closer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/pipes_redirect.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/pipe_management.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/wait_for_complete.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/wait_for_complete.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +118,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -128,6 +131,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Native Application.all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="input.txt &quot;cat -e&quot; &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
       <envs>
         <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
@@ -150,11 +158,6 @@
       </envs>
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="main.c" CONFIG_NAME="main.c">
@@ -218,7 +221,9 @@
       <workItem from="1715990145299" duration="16690000" />
       <workItem from="1716161998520" duration="3477000" />
       <workItem from="1716323233775" duration="15643000" />
-      <workItem from="1716347807175" duration="8888000" />
+      <workItem from="1716347807175" duration="17857000" />
+      <workItem from="1716389704570" duration="7491000" />
+      <workItem from="1716552482606" duration="9741000" />
     </task>
     <servers />
   </component>

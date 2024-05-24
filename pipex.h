@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:39:14 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/22 06:09:33 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/24 18:05:07 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 
 #define fd_read 0
 #define fd_write 1
+#define main_pipe 0
+#define aux_pipe 1
 
 typedef struct enviroment
 {
@@ -33,7 +35,7 @@ typedef struct enviroment
 	char				*outfile;
 	char				***lst_commands;
 int 				arg_counter;
-int					last_used_fd;
+int 				temp_fd;
 } t_env;
 
 //Main function:
@@ -53,11 +55,12 @@ void failed_executer();
 //utils
 int child_birth(void);
 void wait_for_children(t_env *information);
-void middle_childs_birther(t_env *information, int fd[2], char **envp);
-void fd_closer(int *fd, int flag, int opened_file);
-void build_extra_pipe(int fd[2]);
+void middle_childs_birther(t_env *information, int fd[2][2], char **envp);
+void fd_closer(int fd[2]);
+void build_extra_pipe(int *fd);
 void pipe_redirect(int redirector_fd, int redirected_fd);
 void infile_outfile_check(t_env *information, char **argv, int i);
+void double_pipe(int fd[2][2]);
 
 //Errors
 void malloc_error_check(char const *str);
