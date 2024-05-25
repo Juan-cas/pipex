@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 02:33:05 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/24 17:53:49 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:21:31 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ static void middle_childs(char **commands, t_env *information, int fd[2][2], cha
 	pipe_redirect(fd[aux_pipe][fd_write], STDOUT_FILENO);
 	fd_closer(fd[0]);
 	fd_closer(fd[1]);
-	close(information->temp_fd);
-	if (execve(binary_location, commands, envp) == -1)
-		exit(1);
+	executor(binary_location, commands, envp);
 }
 
 void middle_childs_birther(t_env *information, int fd[2][2], char **envp)
@@ -36,12 +34,15 @@ void middle_childs_birther(t_env *information, int fd[2][2], char **envp)
 	j = information->arg_counter - 4;
 	while (j--)
 	{
-		build_extra_pipe(fd);
+		fd_swap(fd);
+		build_extra_pipe(fd[1]);
+		++i;
 		pid = child_birth();
 		if (pid == 0)
-			middle_childs(information->lst_commands[++i], information, fd, envp);
-		fd_closer(fd);
+			middle_childs(information->lst_commands[i], information, fd, envp);
+		fd_closer(fd[0]);
 	}
+	fd_swap(fd);
 }
 
 int child_birth(void)
@@ -53,9 +54,7 @@ int child_birth(void)
 	child_id = fork();
 	if (child_id == -1)
 	{
-		ft_putstr_fd("trying to make fork # ", 2);
-		ft_putnbr_fd(i, 2);
-		perror(" has failed please try again\n");
+		perror("trying to make fork has failed please try again\n");
 		exit(1);
 	}
 	return (child_id);

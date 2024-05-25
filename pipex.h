@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:39:14 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/24 18:05:07 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/25 04:21:28 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,9 @@ void fd_closer(int fd[2]);
 void build_extra_pipe(int *fd);
 void pipe_redirect(int redirector_fd, int redirected_fd);
 void infile_outfile_check(t_env *information, char **argv, int i);
-void double_pipe(int fd[2][2]);
+void fd_swap(int fd[2][2]);
+void fd_closer_with_file(int fd[2], int opened_fd);
+void executor(char *binary_location, char **commands, char **envp);
 
 //Errors
 void malloc_error_check(char const *str);

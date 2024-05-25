@@ -1,8 +1,0 @@
-input.txt
-lib
-Makefile
-obj
-output.txt
-pipex
-pipex.h
-src
