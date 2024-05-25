@@ -27,7 +27,9 @@ $(SRC_DIR)/parsing/relative_or_absolute.c \
 $(SRC_DIR)/error/no_path.c \
 $(SRC_DIR)/utils/infile_outfile.c \
 $(SRC_DIR)/utils/fd_swapper.c \
-$(SRC_DIR)/utils/executor.c \
+$(SRC_DIR)/error/executor.c \
+$(SRC_DIR)/utils/middle_childs.c \
+
 
 # Object files
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))

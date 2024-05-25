@@ -23,17 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/executor.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/fd_swapper.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/middle_childs.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" afterPath="$PROJECT_DIR$/pipex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pipex.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pipex_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/error/errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/error/errors.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/child_birth.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/child_birth.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/error/executor.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/fd_closer.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fd_closer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/infile_outfile.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/infile_outfile.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/pipe_management.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/pipe_management.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +132,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Native Application.all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="input.txt &quot;cat -e&quot; &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
       <envs>
         <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
@@ -220,12 +226,25 @@
       <workItem from="1716389704570" duration="7491000" />
       <workItem from="1716552482606" duration="14403000" />
       <workItem from="1716582911086" duration="9108000" />
-      <workItem from="1716650336150" duration="711000" />
+      <workItem from="1716650336150" duration="4260000" />
+      <workItem from="1716655071795" duration="171000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/error/errors.c</url>
+          <line>36</line>
+          <option name="temporary" value="true" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

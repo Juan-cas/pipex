@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:39:14 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/25 04:21:28 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/25 18:38:10 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ typedef struct enviroment
 	char				*outfile;
 	char				***lst_commands;
 int 				arg_counter;
-int 				temp_fd;
 } t_env;
 
 //Main function:
@@ -62,12 +61,11 @@ void pipe_redirect(int redirector_fd, int redirected_fd);
 void infile_outfile_check(t_env *information, char **argv, int i);
 void fd_swap(int fd[2][2]);
 void fd_closer_with_file(int fd[2], int opened_fd);
-void executor(char *binary_location, char **commands, char **envp);
 
 //Errors
 void malloc_error_check(char const *str);
 int fd_open_and_check_error(char *file, int flag);
 void there_is_no_path();
-void can_open_file(t_env *information, int flag);
+void executor(char *binary_location, char **commands, char **envp);
 
 #endif //PIPEX_PIPEX_H
