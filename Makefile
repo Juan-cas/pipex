@@ -17,7 +17,6 @@ $(SRC_DIR)/utils/free_matrix.c \
 $(SRC_DIR)/error/errors.c \
 $(SRC_DIR)/utils/struct_free.c \
 $(SRC_DIR)/utils/child_birth.c \
-$(SRC_DIR)/utils/command_split.c \
 $(SRC_DIR)/utils/append.c \
 $(SRC_DIR)/pipex_bonus.c \
 $(SRC_DIR)/utils/wait_for_complete.c \
@@ -29,7 +28,7 @@ $(SRC_DIR)/utils/infile_outfile.c \
 $(SRC_DIR)/utils/fd_swapper.c \
 $(SRC_DIR)/error/executor.c \
 $(SRC_DIR)/utils/middle_childs.c \
-
+$(SRC_DIR)/utils/opener.c \
 
 # Object files
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))

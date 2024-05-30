@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:39:14 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/25 18:38:10 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/28 06:30:41 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,9 @@ void fd_closer_with_file(int fd[2], int opened_fd);
 
 //Errors
 void malloc_error_check(char const *str);
-int fd_open_and_check_error(char *file, int flag);
 void there_is_no_path();
+int open_infile(char *file);
+int open_outfile(char *file);
 void executor(char *binary_location, char **commands, char **envp);
 
-#endif //PIPEX_PIPEX_H
+#endif //PIPEX_PIPEX_

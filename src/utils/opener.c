@@ -6,15 +6,32 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:55:40 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/14 18:57:57 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/28 06:29:24 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-void open_infile(int *fd, char *file)
+int open_infile(char *file)
 {
-	*fd = open(file, O_RDONLY);
-	if ((*fd) == -1)
+	int fd;
+	fd = open(file, O_RDONLY);
+	if (fd == -1)
+	{
+		perror("please check in_file permissions or that it exists\n");
 		exit(1);
+	}
+	return (fd);
+}
+
+int open_outfile(char *file)
+{
+	int fd;
+	fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd == -1)
+	{
+		perror("please check out_file permissions\n");
+		exit(1);
+	}
+	return (fd);
 }

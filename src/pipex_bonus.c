@@ -6,7 +6,7 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 02:29:12 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/25 04:22:19 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/05/28 06:31:47 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void first_child(char **commands, t_env *infomation, int fd[2][2], char *
 	int inputfd;
 
 	binary_location = path_tester(infomation->paths, commands[0]);
-	inputfd = fd_open_and_check_error(infomation->infile, 0);
+	inputfd = open_infile(infomation->infile);
 	pipe_redirect(inputfd, STDIN_FILENO);
 	pipe_redirect(fd[aux_pipe][fd_write], STDOUT_FILENO);
 	fd_closer(fd[main_pipe]);
@@ -33,7 +33,7 @@ static void last_child(char **commands, t_env *information, int fd[2][2], char *
 	char *binary_location;
 
 	binary_location = path_tester(information->paths, commands[0]);
-	outputfd = fd_open_and_check_error(information->outfile, 1);
+	outputfd = open_outfile(information->outfile);
 	pipe_redirect(fd[main_pipe][fd_read], STDIN_FILENO);
 	pipe_redirect(outputfd, STDOUT_FILENO);
 	fd_closer(fd[0]);

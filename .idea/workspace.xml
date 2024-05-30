@@ -23,9 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="786ad7a2-3494-4af4-ac3a-310030bea881" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/wait_for_complete.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/wait_for_complete.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libft/ft_strnstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libft/ft_strnstr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipex" beforeDir="false" afterPath="$PROJECT_DIR$/pipex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipex.h" beforeDir="false" afterPath="$PROJECT_DIR$/pipex.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/error/errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/error/errors.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipex.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipex_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipex_bonus.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/command_split.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/infile_outfile.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/infile_outfile.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/opener.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/opener.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +112,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/Storage/42cursus/Push_Swap&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/Storage/42cursus/philosopers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -122,6 +131,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Native Application.all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="input.txt &quot;cat -e&quot; &quot;cat -e&quot; &quot;wc -l&quot; output.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipex" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/pipex">
       <envs>
         <env name="LSAN_OPTIONS" value="verbosity=1:log_threads=1" />
@@ -214,24 +228,16 @@
       <workItem from="1716650336150" duration="4260000" />
       <workItem from="1716655071795" duration="171000" />
       <workItem from="1716681484378" duration="661000" />
-      <workItem from="1716864764329" duration="1891000" />
+      <workItem from="1716864764329" duration="3393000" />
+      <workItem from="1716895740000" duration="2139000" />
+      <workItem from="1716902838772" duration="357000" />
+      <workItem from="1716907673590" duration="1216000" />
+      <workItem from="1717107357429" duration="1450000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/error/errors.c</url>
-          <line>36</line>
-          <option name="temporary" value="true" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
