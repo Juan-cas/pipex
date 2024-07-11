@@ -6,17 +6,15 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:26:07 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/22 06:08:11 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/07/11 19:04:57 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
 
-
-
-int main(int argc, char **argv, char **envp)
+int	main(int argc, char **argv, char **envp)
 {
-	t_env *information;
+	t_env	*information;
 
 	if (argc == 5 && BONUS == 0)
 	{
@@ -35,5 +33,5 @@ int main(int argc, char **argv, char **envp)
 	}
 	free_struct(information);
 	free(information);
-	return 0;
+	return (0);
 }

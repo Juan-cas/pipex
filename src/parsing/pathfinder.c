@@ -6,33 +6,33 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:42:50 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/22 06:42:23 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:37:19 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-static char *w_path(char **envp)
+static char	*w_path(char **envp)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (envp[++i])
 	{
 		if (ft_strncmp(envp[i], "PATH=", 5) == 0)
 		{
-			return envp[i];
+			return (envp[i]);
 		}
 	}
 	there_is_no_path();
 	return (NULL);
 }
 
-char *path_tester(char **matrix, char *command)
+char	*path_tester(char **matrix, char *command)
 {
-	int i;
-	char *order;
-	int checker;
+	int		i;
+	char	*order;
+	int		checker;
 
 	i = -1;
 	if (relative_or_absolute(command))
@@ -42,7 +42,7 @@ char *path_tester(char **matrix, char *command)
 		else
 			failed_executer();
 	}
-	while(matrix[++i])
+	while (matrix[++i])
 	{
 		order = append(matrix[i], command);
 		if (!order)
@@ -55,14 +55,13 @@ char *path_tester(char **matrix, char *command)
 	return (NULL);
 }
 
-static void command_splitter(t_env *information, char **argv)
+static void	command_splitter(t_env *information, char **argv)
 {
 	int	i;
 	int	j;
 
 	j = 0;
 	i = 2;
-
 	while (i < information->arg_counter)
 	{
 		information->lst_commands[j] = ft_split(argv[i], ' ');
@@ -73,7 +72,7 @@ static void command_splitter(t_env *information, char **argv)
 	}
 }
 
-t_env *pathfinder(char **envp, char **argv)
+t_env	*pathfinder(char **envp, char **argv)
 {
 	char	*str;
 	int		i;
@@ -84,7 +83,8 @@ t_env *pathfinder(char **envp, char **argv)
 		exit(1);
 	init_struct(information, argv);
 	i = 1;
-	while (argv[++i]);
+	while (argv[i])
+		i++;
 	if (envp)
 	{
 		str = w_path(envp);

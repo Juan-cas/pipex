@@ -6,18 +6,16 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 02:33:05 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/25 17:21:31 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:40:16 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-
-
-int child_birth(void)
+int	child_birth(void)
 {
-	int child_id;
-	static int i = 0;
+	int			child_id;
+	static int	i = 0;
 
 	i++;
 	child_id = fork();

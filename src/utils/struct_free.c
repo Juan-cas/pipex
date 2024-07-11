@@ -6,15 +6,15 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:24:45 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/15 23:35:58 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/07/11 19:02:13 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-void free_struct(t_env *commands)
+void	free_struct(t_env *commands)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	free(commands->infile);

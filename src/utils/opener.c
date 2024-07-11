@@ -6,15 +6,16 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:55:40 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/28 06:29:24 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/07/11 19:01:38 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-int open_infile(char *file)
+int	open_infile(char *file)
 {
-	int fd;
+	int	fd;
+
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 	{
@@ -24,9 +25,10 @@ int open_infile(char *file)
 	return (fd);
 }
 
-int open_outfile(char *file)
+int	open_outfile(char *file)
 {
-	int fd;
+	int	fd;
+
 	fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd == -1)
 	{

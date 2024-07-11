@@ -6,13 +6,13 @@
 /*   By: juan-cas <juan-cas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 03:01:17 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/05/25 03:09:57 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:40:36 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../pipex.h"
 
-void fd_swap(int fd[2][2])
+void	fd_swap(int fd[2][2])
 {
 	fd[0][0] = fd[1][0];
 	fd[0][1] = fd[1][1];
